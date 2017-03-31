@@ -18,7 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+
+    NSString *htmlString = @"String with a link <a href=\"http://www.google.com\">This is a link</a> and the end";
+    NSData *data = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
+    TFHpple* doc = [[TFHpple alloc] initWithHTMLData:data];
+
+    TFHppleElement *e = [doc peekAtSearchWithXPathQuery:@"//a"];
+
 }
 
 - (void)didReceiveMemoryWarning

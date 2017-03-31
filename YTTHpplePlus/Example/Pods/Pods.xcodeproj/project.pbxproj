@@ -12,7 +12,7 @@
 		33262C9A52699E1464801748D4092038 /* Pods-YTTHpplePlus_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8B18DB7507CAB43DBEB762E1F05924 /* Pods-YTTHpplePlus_Tests-dummy.m */; };
 		3DFE59E26C2A811E2D8910643C7E6250 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 211001C1D743B32A6A27D819F02AC685 /* TFHppleElement.m */; };
 		45578AEB52B2D45B564BE6E06A71FBD3 /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE4EDA41C188A30177F7AC8DA40C9B9 /* TFHpple.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B46A97BEE13D7CAC54BB1316BF0A9DB /* NSString+XMLLibUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E8880AF9F59CDC02F9BD5608A04474D /* NSString+XMLLibUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B46A97BEE13D7CAC54BB1316BF0A9DB /* NSString+XMLLibUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E8880AF9F59CDC02F9BD5608A04474D /* NSString+XMLLibUtil.h */; };
 		6B68824B89C29F24E3D93973A3394804 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8A0AB7302BCBC2B1C6C52F34CBC882 /* XPathQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0B06E309C209D7BE74D72ABA6A4E94 /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9CC2301885AB6A51CD50D8CCE429CC /* TFHppleElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96479864DC1307C6AB2310EF3C723E14 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565A7E5F99D2050D3DC31B85B0D07F1 /* XPathQuery.m */; };
@@ -48,17 +48,17 @@
 		3D614A39461409449CEE0AC4E5B0AF1D /* Pods-YTTHpplePlus_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTHpplePlus_Tests-resources.sh"; sourceTree = "<group>"; };
 		3E7AA26A26139848A00190EE61EED385 /* Pods-YTTHpplePlus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YTTHpplePlus_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3F8A0AB7302BCBC2B1C6C52F34CBC882 /* XPathQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
-		4AEB90F4E2156DC5E18B4C11459418B4 /* libPods-YTTHpplePlus_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-YTTHpplePlus_Tests.a"; path = "libPods-YTTHpplePlus_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AEB90F4E2156DC5E18B4C11459418B4 /* libPods-YTTHpplePlus_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTTHpplePlus_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AED20B34EEA9DC81626F28DDE02BDCF /* Pods-YTTHpplePlus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YTTHpplePlus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C93EE674321EFC1798714CD1EFABFD7 /* Pods-YTTHpplePlus_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTHpplePlus_Example-resources.sh"; sourceTree = "<group>"; };
-		5006D31F6A4795752ABE009B10CC71C5 /* libYTTHpplePlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYTTHpplePlus.a; path = libYTTHpplePlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5006D31F6A4795752ABE009B10CC71C5 /* libYTTHpplePlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYTTHpplePlus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8537F49E4A18276D991C0DADE370C8 /* YTTHpplePlus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YTTHpplePlus-prefix.pch"; sourceTree = "<group>"; };
 		5D1384F94B7B022BDD361CBB905332F7 /* YTTHpplePlus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YTTHpplePlus-dummy.m"; sourceTree = "<group>"; };
 		61E595AC8AA2852EF1936955443BA6E5 /* Pods-YTTHpplePlus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YTTHpplePlus_Example-frameworks.sh"; sourceTree = "<group>"; };
 		72E7F5792BC1BE9EEE580C1B7AB3EA9C /* Pods-YTTHpplePlus_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YTTHpplePlus_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7373EF4280F2C3897FCBFE5348F55896 /* libPods-YTTHpplePlus_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-YTTHpplePlus_Example.a"; path = "libPods-YTTHpplePlus_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7373EF4280F2C3897FCBFE5348F55896 /* libPods-YTTHpplePlus_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTTHpplePlus_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9B344A94B780DC52B0D1674B2A1161 /* NSString+XMLLibUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLLibUtil.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E8880AF9F59CDC02F9BD5608A04474D /* NSString+XMLLibUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLLibUtil.h"; sourceTree = "<group>"; };
 		A1D8E82CD924F6917DB627CB17970ED6 /* TFHpple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		BB60CCCA43B44A5D7279EB244A39F79A /* Pods-YTTHpplePlus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YTTHpplePlus_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +113,6 @@
 				3F8A0AB7302BCBC2B1C6C52F34CBC882 /* XPathQuery.h */,
 				2565A7E5F99D2050D3DC31B85B0D07F1 /* XPathQuery.m */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -156,7 +155,6 @@
 			children = (
 				0AF059B1EC2BD1EE0E2E13912131CF11 /* Classes */,
 			);
-			name = YTTHpplePlus;
 			path = YTTHpplePlus;
 			sourceTree = "<group>";
 		};
@@ -238,10 +236,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B46A97BEE13D7CAC54BB1316BF0A9DB /* NSString+XMLLibUtil.h in Headers */,
 				45578AEB52B2D45B564BE6E06A71FBD3 /* TFHpple.h in Headers */,
 				6F0B06E309C209D7BE74D72ABA6A4E94 /* TFHppleElement.h in Headers */,
 				6B68824B89C29F24E3D93973A3394804 /* XPathQuery.h in Headers */,
+				6B46A97BEE13D7CAC54BB1316BF0A9DB /* NSString+XMLLibUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFEB6BFF3113BBD82BA25A872D6F667F /* YTTHpplePlus.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -554,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFEB6BFF3113BBD82BA25A872D6F667F /* YTTHpplePlus.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
