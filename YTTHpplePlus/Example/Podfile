@@ -1,0 +1,12 @@
+#?use_frameworks!
+platform :ios, '8.0'
+
+target 'YTTHpplePlus_Example' do
+  pod 'YTTHpplePlus', :path => '../'
+end
+
+target 'YTTHpplePlus_Tests' do
+    pod 'YTTHpplePlus', :path => '../'
+    
+end
+

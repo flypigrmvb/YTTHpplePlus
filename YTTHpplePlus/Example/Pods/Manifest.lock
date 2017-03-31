@@ -1,0 +1,16 @@
+PODS:
+  - YTTHpplePlus (0.1.0)
+
+DEPENDENCIES:
+  - YTTHpplePlus (from `../`)
+
+EXTERNAL SOURCES:
+  YTTHpplePlus:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YTTHpplePlus: 6687b32a1d3c96a3b610ca8ecc3148f9165b108a
+
+PODFILE CHECKSUM: 2c283a44a57e695961fea6683ae9b475ded9bd3c
+
+COCOAPODS: 1.2.0
