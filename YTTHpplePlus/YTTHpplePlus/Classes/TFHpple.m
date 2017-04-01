@@ -42,6 +42,8 @@
     
     // XML/HTML
     xmlDocPtr _doc;
+    // xmlDocPtr wrapper
+    TFDoc* _tfDoc;
 }
 
 @end
@@ -83,7 +85,7 @@
     if (_doc) {
         xmlFreeDoc(_doc);
     }
-    NSLog(@"======");
+    NSLog(@"===TFHpple dealloc===");
 }
 
 - (id)initWithData:(NSData *)theData isXML:(BOOL)isDataXML {
@@ -130,13 +132,23 @@
     return [[self class] hppleWithData:theData encoding:nil isXML:YES];
 }
 
+#pragma mark - ......::::::: private :::::::......
+
+- (TFDoc*)tfDoc {
+    if (!_tfDoc) {
+        _tfDoc = [TFDoc new];
+        _tfDoc.xmlDoc = _doc;
+    }
+    return _tfDoc;
+}
+
 #pragma mark - public
 
 // Returns all elements at xPath.
 - (NSArray *)searchWithXPathQuery:(NSString *)xPathOrCSS
 {
     NSArray * detailNodes = nil;
-    detailNodes = PerformXPathQuery(_doc, xPathOrCSS);
+    detailNodes = PerformXPathQuery([self tfDoc], xPathOrCSS);
     
     NSMutableArray * hppleElements = [NSMutableArray array];
     for (id node in detailNodes) {
@@ -166,7 +178,7 @@
  */
 - (void)setOrUpdateAttribute:(NSDictionary*)attr inElement:(TFHppleElement*)element {
     NSString* query = [NSString stringWithFormat:@"//%@[@%@=%@]", element.tagName, @"p_ytt_id", element.privateId];
-    PerformXPathUpdateAttr(_doc, query, attr);
+    PerformXPathUpdateAttr([self tfDoc], query, attr);
 }
 
 /**
@@ -177,7 +189,7 @@
  */
 - (void)setOrUpdateContent:(NSString*)content inElement:(TFHppleElement*)element{
     NSString* query = [NSString stringWithFormat:@"//%@[@%@=%@]", element.tagName, @"p_ytt_id", element.privateId];
-    PerformXPathUpdateContent(_doc, query, content);
+    PerformXPathUpdateContent([self tfDoc], query, content);
 }
 
 /**
@@ -187,7 +199,7 @@
  */
 - (void)deleteElement:(TFHppleElement*)element {
     NSString* query = [NSString stringWithFormat:@"//%@[@%@=%@]", element.tagName, @"p_ytt_id", element.privateId];
-    PerformXPathDeleteNode(_doc, query);
+    PerformXPathDeleteNode([self tfDoc], query);
 }
 
 /**
@@ -197,7 +209,7 @@
  */
 - (void)replaceElement:(TFHppleElement*)element withElement:(NSDictionary*)newElement {
     NSString* query = [NSString stringWithFormat:@"//%@[@%@=%@]", element.tagName, @"p_ytt_id", element.privateId];
-    PerformXPathReplaceNode(_doc, query, newElement);
+    PerformXPathReplaceNode([self tfDoc], query, newElement);
 }
 
 #pragma mark - ......::::::: export support :::::::......

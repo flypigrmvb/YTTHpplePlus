@@ -34,8 +34,8 @@
     return unescapedString;
 }
 
-- (const xmlChar *)xmlString {
-    return (const xmlChar *)[[self stringByEscapingXML] UTF8String];
+- (const unsigned char *)xmlString {
+    return (const unsigned char *)[[self stringByEscapingXML] UTF8String];
 }
 
 @end

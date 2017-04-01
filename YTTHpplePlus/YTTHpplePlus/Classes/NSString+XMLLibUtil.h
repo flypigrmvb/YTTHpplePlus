@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libxml/tree.h>
 
 @interface NSString (XMLLibUtil)
 
-- (const xmlChar *)xmlString;
+- (const unsigned char *)xmlString;
 
 @end

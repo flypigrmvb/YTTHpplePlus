@@ -29,6 +29,8 @@
     NSURL *testFileUrl = [testBundle URLForResource:TEST_DOCUMENT_NAME withExtension:TEST_DOCUMENT_EXTENSION];
     NSData * data = [NSData dataWithContentsOfURL:testFileUrl];
     self.doc = [[TFHpple alloc] initWithHTMLData:data];
+    
+    NSLog(@"=");
 }
 
 - (void)tearDown {

@@ -16,6 +16,8 @@
 		6B68824B89C29F24E3D93973A3394804 /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8A0AB7302BCBC2B1C6C52F34CBC882 /* XPathQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0B06E309C209D7BE74D72ABA6A4E94 /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9CC2301885AB6A51CD50D8CCE429CC /* TFHppleElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96479864DC1307C6AB2310EF3C723E14 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2565A7E5F99D2050D3DC31B85B0D07F1 /* XPathQuery.m */; };
+		9CC3A7DC1E8E641300F166B0 /* TFDoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC3A7DA1E8E641300F166B0 /* TFDoc.h */; };
+		9CC3A7DD1E8E641300F166B0 /* TFDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC3A7DB1E8E641300F166B0 /* TFDoc.m */; };
 		B2F721683A981CFA44513C7E6377CA71 /* YTTHpplePlus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1384F94B7B022BDD361CBB905332F7 /* YTTHpplePlus-dummy.m */; };
 		BF06FB4AD53C8F0A68103F17420A0375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		C448D950292048443077DA3ADC0C1835 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -59,6 +61,8 @@
 		7373EF4280F2C3897FCBFE5348F55896 /* libPods-YTTHpplePlus_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTTHpplePlus_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9B344A94B780DC52B0D1674B2A1161 /* NSString+XMLLibUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLLibUtil.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CC3A7DA1E8E641300F166B0 /* TFDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFDoc.h; sourceTree = "<group>"; };
+		9CC3A7DB1E8E641300F166B0 /* TFDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDoc.m; sourceTree = "<group>"; };
 		9E8880AF9F59CDC02F9BD5608A04474D /* NSString+XMLLibUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLLibUtil.h"; sourceTree = "<group>"; };
 		A1D8E82CD924F6917DB627CB17970ED6 /* TFHpple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		BB60CCCA43B44A5D7279EB244A39F79A /* Pods-YTTHpplePlus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YTTHpplePlus_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				211001C1D743B32A6A27D819F02AC685 /* TFHppleElement.m */,
 				3F8A0AB7302BCBC2B1C6C52F34CBC882 /* XPathQuery.h */,
 				2565A7E5F99D2050D3DC31B85B0D07F1 /* XPathQuery.m */,
+				9CC3A7DA1E8E641300F166B0 /* TFDoc.h */,
+				9CC3A7DB1E8E641300F166B0 /* TFDoc.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45578AEB52B2D45B564BE6E06A71FBD3 /* TFHpple.h in Headers */,
+				9CC3A7DC1E8E641300F166B0 /* TFDoc.h in Headers */,
 				6F0B06E309C209D7BE74D72ABA6A4E94 /* TFHppleElement.h in Headers */,
 				6B68824B89C29F24E3D93973A3394804 /* XPathQuery.h in Headers */,
 				6B46A97BEE13D7CAC54BB1316BF0A9DB /* NSString+XMLLibUtil.h in Headers */,
@@ -330,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC3A7DD1E8E641300F166B0 /* TFDoc.m in Sources */,
 				F7995B4309C17E21FAA47355EF1E3A6D /* NSString+XMLLibUtil.m in Sources */,
 				00DD7DAA69C8868C4BC2F86AC70762F0 /* TFHpple.m in Sources */,
 				3DFE59E26C2A811E2D8910643C7E6250 /* TFHppleElement.m in Sources */,

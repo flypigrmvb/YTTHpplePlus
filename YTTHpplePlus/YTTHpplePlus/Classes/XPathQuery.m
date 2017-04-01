@@ -18,8 +18,8 @@
 
 #pragma mark - ......::::::: 方法声明 :::::::......
 NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *parentResult,BOOL parentContent);
-NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query);
-id PerformXPathActionTemplate(xmlDocPtr doc, NSString *query, XPathActionType type, id params);
+NSArray *PerformXPathQuery(TFDoc* doc, NSString *query);
+id PerformXPathActionTemplate(TFDoc* doc, NSString *query, XPathActionType type, id params);
 xmlNodePtr createNode(NSDictionary* params);
 
 
@@ -120,38 +120,40 @@ NSDictionary *DictionaryForNode(xmlNodePtr currentNode, NSMutableDictionary *par
 /**
  返回数据结构：NSArray<NSDictionary<NSString* NSString*>>*
  */
-NSArray *PerformXPathQuery(xmlDocPtr doc, NSString *query)
+NSArray *PerformXPathQuery(TFDoc* doc, NSString *query)
 {
     return PerformXPathActionTemplate(doc, query, XPathActionQuery, nil);
 }
 
-int PerformXPathUpdateAttr(xmlDocPtr doc, NSString *query, NSDictionary* attr)
+int PerformXPathUpdateAttr(TFDoc* doc, NSString *query, NSDictionary* attr)
 {
     PerformXPathActionTemplate(doc, query, XPathActionSetOrUpdateAttr, attr);
     return 0;
 }
 
-int PerformXPathUpdateContent(xmlDocPtr doc, NSString *query, NSString* content)
+int PerformXPathUpdateContent(TFDoc* doc, NSString *query, NSString* content)
 {
     PerformXPathActionTemplate(doc, query, XPathActionSetOrUpdateContent, content);
     return 0;
 }
 
-int PerformXPathDeleteNode(xmlDocPtr doc, NSString *query)
+int PerformXPathDeleteNode(TFDoc* doc, NSString *query)
 {
     PerformXPathActionTemplate(doc, query, XPathActionDelete, nil);
     return 0;
 }
 
-int PerformXPathReplaceNode(xmlDocPtr doc, NSString *query, NSDictionary* attr)
+int PerformXPathReplaceNode(TFDoc* doc, NSString *query, NSDictionary* attr)
 {
     PerformXPathActionTemplate(doc, query, XPathActionReplace, attr);
     return 0;
 }
 
-id PerformXPathActionTemplate(xmlDocPtr doc, NSString *query, XPathActionType type, id params) {
+id PerformXPathActionTemplate(TFDoc* doc, NSString *query, XPathActionType type, id params) {
     
     id resultObj = nil;
+    
+    xmlDocPtr docPtr = doc.xmlDoc;
     
     xmlXPathContextPtr xpathCtx;
     xmlXPathObjectPtr xpathObj;
@@ -162,7 +164,7 @@ id PerformXPathActionTemplate(xmlDocPtr doc, NSString *query, XPathActionType ty
     }
     
     /* Create xpath evaluation context */
-    xpathCtx = xmlXPathNewContext(doc);
+    xpathCtx = xmlXPathNewContext(docPtr);
     if(xpathCtx == NULL) {
         NSLog(@"Unable to create XPath context.");
         return nil;
@@ -279,19 +281,22 @@ NSArray *PerformHTMLXPathQuery(NSData *document, NSString *query) {
 
 NSArray *PerformHTMLXPathQueryWithEncoding(NSData *document, NSString *query,NSString *encoding)
 {
-    xmlDocPtr doc;
+    xmlDocPtr docPtr;
     
     /* Load XML document */
     const char *encoded = encoding ? [encoding cStringUsingEncoding:NSUTF8StringEncoding] : NULL;
     
-    doc = htmlReadMemory([document bytes], (int)[document length], "", encoded, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR);
-    if (doc == NULL) {
+    docPtr = htmlReadMemory([document bytes], (int)[document length], "", encoded, HTML_PARSE_NOWARNING | HTML_PARSE_NOERROR);
+    if (docPtr == NULL) {
         NSLog(@"Unable to parse.");
         return nil;
     }
     
+    TFDoc* doc = [TFDoc new];
+    doc.xmlDoc = docPtr;
+    
     NSArray *result = PerformXPathQuery(doc, query);
-    xmlFreeDoc(doc);
+    xmlFreeDoc(docPtr);
     
     return result;
 }
@@ -302,20 +307,23 @@ NSArray *PerformXMLXPathQuery(NSData *document, NSString *query) {
 
 NSArray *PerformXMLXPathQueryWithEncoding(NSData *document, NSString *query,NSString *encoding)
 {
-    xmlDocPtr doc;
+    xmlDocPtr docPtr;
     
     /* Load XML document */
     const char *encoded = encoding ? [encoding cStringUsingEncoding:NSUTF8StringEncoding] : NULL;
     
-    doc = xmlReadMemory([document bytes], (int)[document length], "", encoded, XML_PARSE_RECOVER);
+    docPtr = xmlReadMemory([document bytes], (int)[document length], "", encoded, XML_PARSE_RECOVER);
     
-    if (doc == NULL) {
+    if (docPtr == NULL) {
         NSLog(@"Unable to parse.");
         return nil;
     }
     
+    TFDoc* doc = [TFDoc new];
+    doc.xmlDoc = docPtr;
+
     NSArray *result = PerformXPathQuery(doc, query);
-    xmlFreeDoc(doc);
+    xmlFreeDoc(docPtr);
     
     return result;
 }
